@@ -5,14 +5,11 @@ import script
 
 
 # Esse teste irá verificar se o retorna da função 'saudacao' é 'hello world'
-class TestStringMethods(unittest.TestCase):
+class testSaudacao(unittest.TestCase):
 
-    def test_string(self):
+    def test_return(self):
         mensagem = script.saudacao()
         self.assertEqual(mensagem.lower().split(), ['hello', 'world'])
-        # check that s.split fails when the separator is not a string
-        with self.assertRaises(TypeError):
-            mensagem.split(2)
 
 
 if __name__ == '__main__':
